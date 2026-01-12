@@ -43,17 +43,112 @@
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <img src="logo.png" class="logo-icon" alt="Logo">
-    <div class="logo-text">RBX GROUPS</div>
-  </div>
+  <body>
 
-  <!-- PAGE CONTENT -->
-  <div class="content">
-    <h1>Welcome</h1>
-    <p>This website is hosted for free using GitHub Pages.</p>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0b0f1a, #111827);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .card {
+    background: #1f2937;
+    width: 360px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d1d5db;
+  }
+
+  label {
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  select, input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 12px 0;
+    border-radius: 6px;
+    border: none;
+    background: #111827;
+    color: white;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background: #e5e7eb;
+  }
+
+  .note {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 12px;
+    text-align: center;
+  }
+</style>
+
+<div class="card">
+  <div class="logo">ROBLOX</div>
+  <div class="subtitle">Sign up and start having fun!</div>
+
+  <label>Birthday</label>
+  <select><option>Month</option></select>
+  <select><option>Day</option></select>
+  <select><option>Year</option></select>
+
+  <label>Username</label>
+  <input type="text" placeholder="Don't use your real name">
+
+  <label>Password</label>
+  <input type="password" placeholder="At least 8 characters">
+
+  <label>Gender (optional)</label>
+  <select>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+  </select>
+
+  <button>Sign Up</button>
+
+  <div class="note">
+    This is a demo UI. Not affiliated with Roblox.
   </div>
+</div>
+
+</body>
+
 
 </body>
 </html>
