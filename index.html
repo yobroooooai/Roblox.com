@@ -107,63 +107,7 @@
   </div>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>College testing</title>
-</head>
 
-<body>
-
-<!-- IMPORTANT: no form submission -->
-<form onsubmit="return false;">
-
-  <h3>College testing</h3>
-
-  <input id="box1" placeholder="Type Box 1">
-  <br><br>
-
-  <input id="box2" placeholder="Type box 2">
-  <br><br>
-
-  <!-- ONLY THIS BUTTON SENDS -->
-  <button type="button" onclick="sendToDiscord()">Send Button</button>
-  <br><br>
-
-  <!-- THESE BUTTONS DO NOTHING -->
-  <button type="button">RANDOM BUTTON DONT TOUCH?</button>
-  <br><br>
-
-  <button type="button">RANDOM BUTTON DONT TOUCH</button>
-  <br><br>
-
-  <div>Random BUTTON DONT TOUCH</div>
-
-</form>
-
-<script>
-const webhookURL = "https://discord.com/api/webhooks/1460127416885448807/iYTv9KQhLVaB6g_OjeuauXc7RXsmj4BPqKCEgj70qFpA1or0HX_lI081iq-oCRR-D-FA";
-
-function sendToDiscord() {
-  const box1 = document.getElementById("box1").value;
-  const box2 = document.getElementById("box2").value;
-
-  fetch(webhookURL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username: "Student Submission",
-      content:
-        "Box 1: " + box1 + "\n" +
-        "Box 2: " + box2
-    })
-  })
-  .then(() => {
-    document.getElementById("box1").value = "";
-    document.getElementById("box2").value = "";
-  });
-}
 </script>
 
 </body>
