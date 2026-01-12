@@ -2,129 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>RBX Groups</title>
+  <title>ROBLOX</title>
 
-  <!-- TAB ICON -->
-  <link rel="icon" type="image/png" href="favicon.png?v=3" />
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png?v=3">
 
-  <!-- FONT -->
+  <!-- FONT (close to Roblox) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
       box-sizing: border-box;
+      font-family: 'Inter', Arial, sans-serif;
     }
 
     body {
       margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-        url("https://images.unsplash.com/photo-1611605698335-8b6b59a9f1a3?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      /* BACKGROUND like Roblox */
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1612832021026-375ae70f9d56");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .signup-box {
+      width: 360px;
+      background: #1f2937;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
       color: white;
     }
 
-    .card {
-      width: 360px;
-      background: #1e2733;
-      border-radius: 8px;
-      padding: 28px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    .signup-box h1 {
+      text-align: center;
+      margin: 0 0 6px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    .logo {
+    .signup-box p {
       text-align: center;
-      font-size: 34px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 6px;
-    }
-
-    .subtitle {
-      text-align: center;
+      margin: 0 0 20px;
+      color: #cbd5e1;
       font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 22px;
     }
 
     label {
       font-size: 12px;
-      margin-bottom: 6px;
+      color: #cbd5e1;
       display: block;
-      opacity: 0.85;
+      margin: 12px 0 6px;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
     }
 
     select,
     input {
       width: 100%;
-      padding: 11px;
+      padding: 10px;
+      background: #111827;
+      border: 1px solid #374151;
       border-radius: 6px;
-      border: none;
-      outline: none;
-      background: #121a24;
       color: white;
-      margin-bottom: 14px;
       font-size: 14px;
     }
 
-    select {
-      cursor: pointer;
-    }
-
-    .birthday {
-      display: flex;
-      gap: 8px;
+    select:focus,
+    input:focus {
+      outline: none;
+      border-color: #ffffff;
     }
 
     button {
       width: 100%;
+      margin-top: 18px;
       padding: 12px;
-      margin-top: 8px;
-      border-radius: 6px;
-      border: none;
       background: white;
       color: black;
+      border: none;
+      border-radius: 6px;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 600;
       cursor: pointer;
     }
 
     button:hover {
-      opacity: 0.95;
+      background: #e5e7eb;
     }
   </style>
 </head>
 
 <body>
-
-  <div class="card">
-    <div class="logo">ROBLOX</div>
-    <div class="subtitle">Sign up and start having fun!</div>
+  <div class="signup-box">
+    <h1>ROBLOX</h1>
+    <p>Sign up and start having fun!</p>
 
     <label>Birthday</label>
-    <div class="birthday">
-      <select>
-        <option>Month</option>
-      </select>
-      <select>
-        <option>Day</option>
-      </select>
-      <select>
-        <option>Year</option>
-      </select>
+    <div class="row">
+      <select><option>Month</option></select>
+      <select><option>Day</option></select>
+      <select><option>Year</option></select>
     </div>
 
     <label>Username</label>
-    <input type="text" placeholder="Don't use your real name" />
+    <input placeholder="Don't use your real name">
 
     <label>Password</label>
-    <input type="password" placeholder="At least 8 characters" />
+    <input type="password" placeholder="At least 8 characters">
 
     <label>Gender (optional)</label>
     <select>
@@ -133,8 +128,7 @@
       <option>Other</option>
     </select>
 
-    <button type="button">Sign Up</button>
+    <button>Sign Up</button>
   </div>
-
 </body>
 </html>
